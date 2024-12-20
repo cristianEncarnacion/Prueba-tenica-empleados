@@ -1,0 +1,28 @@
+<h2>Listado de Empleados</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Documento</th>
+      <th>Género</th>
+      <th>Posición</th>
+      <th>Fecha de Inicio</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (empleadoApi of empleadoApi; track $index) {
+      <tr>
+        <td>{{ $index + 1 }}</td>
+        <td>{{ empleadoApi.name }}</td>
+        <td>{{ empleadoApi.lastName }}</td>
+        <td>{{ empleadoApi.document }}</td>
+        <td>{{ empleadoApi.gender }}</td>
+        <td>{{ empleadoApi.position }}</td>
+        <td>{{ empleadoApi.startDate }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
